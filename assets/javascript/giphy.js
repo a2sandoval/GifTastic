@@ -5,7 +5,10 @@ function ShowMemeButtons() {
     $("#memebuttons").empty(); 
 
     for (var i = 0; i <topic.length; i++) {
-        var j = $("<button>").addClass("btn btn").attr("data-name topic[i]").text("topics[i]");
+        var j = $("<button>");
+        j.addClass("btn btn arraytopics");
+        j.attr("data-name", topic[i]);
+        j.text(topics[i]);
         $("#memebuttons").append(j);
         $('#memeInput').val('')
         console.log(topic);
